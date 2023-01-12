@@ -59,12 +59,14 @@ trSpaces x = [if elem x " " then '-' else x | x <- x]
 selectSnd :: [(Int,Int)] -> [Int]
 selectSnd x = [ snd x| x <- x]
 
---15:
---multiplicaPares :: [(Int,Int)] -> [Int]
---multiplicaPares = [ fst x * snd x | x <- x]
-
---dotProd :: [Int] -> [Int] -> Int
---dotProd x y = sum( multiplicapares[ zip x y | x <- x, y <- y ])
-
-
 --Exercicios realizados em casa:
+
+--15:
+zipador :: [Int] -> [Int] -> [(Int,Int)]
+zipador x y = zip x y
+
+multiplicaPares :: [(Int,Int)] -> [Int]
+multiplicaPares x = [ fst x * snd x | x <- x]
+
+dotProd :: [Int] -> [Int] -> Int
+dotProd x y = sum( multiplicaPares(zipador x y))
