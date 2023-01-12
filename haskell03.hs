@@ -52,7 +52,19 @@ calcExpr :: [Float] -> [Float]
 calcExpr x = [ calc12 x | x <- x, calc12 x > 10]
 
 --13:
+trSpaces :: String -> String
+trSpaces x = [if elem x " " then '-' else x | x <- x]
 
+--14:
+selectSnd :: [(Int,Int)] -> [Int]
+selectSnd x = [ snd x| x <- x]
+
+--15:
+--multiplicaPares :: [(Int,Int)] -> [Int]
+--multiplicaPares = [ fst x * snd x | x <- x]
+
+--dotProd :: [Int] -> [Int] -> Int
+--dotProd x y = sum( multiplicapares[ zip x y | x <- x, y <- y ])
 
 
 --Exercicios realizados em casa:
